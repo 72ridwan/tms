@@ -1,0 +1,1 @@
+echo $$ >> './darknet/main_pid'

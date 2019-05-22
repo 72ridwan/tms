@@ -25,4 +25,12 @@ Icon?
 Thumbs.db
 *.swp
 
+.ipynb_checkpoints
+
+# Ignore the 300MB file of YOLO weights
 darknet/yolov3.weights
+
+# Ignore all maps and video CCTVs
+cctv/
+map/
+darknet/main_pid
