@@ -16,19 +16,23 @@ The code is downloaded from the repository of [PJreddie's YOLOv3 Darknet](https:
    
 1. [Download](https://drive.google.com/open?id=1C3YkvLjn0MWFccc8n9feT2mxrJKs4fDB) the YOLOv3 pre-trained weights data to `darknet` folder.
 
-1. Download the CCTV data and the maps [from this drive](https://drive.google.com/open?id=11upryL7cOCL8uRIXiJTw1mxLaRUjttm3).
+1. Download the CCTV data and the maps [from this drive](https://drive.google.com/open?id=11upryL7cOCL8uRIXiJTw1mxLaRUjttm3). Extract the ZIP content to `tms` or root folder.
 
-1. Run `make` to compile the C source code
+1. Go to `darknet` folder and compile the C source code
+   ```
+   cd darknet
+   make
+   ```
 
 ### Detecting the vehicles
 
 Due to the time constraint of this project, we will be focusing only to detect
 the vehicles in CCTV of Simpang 5 Patung Kuda Selatan at 12:00.
-The video is located in cctv/SIMPANG 4 PATUNG KUDA.
+The video is located in `cctv/SIMPANG 4 PATUNG KUDA`.
 
 1. Go to the root folder.
 
-1. Run the `Pre-processing.ipynb` Jupyter notebook. In the code, you can see that
+1. Run the `Pre-processing.ipynb` Jupyter notebook.
 
 1. In the Linux environment, run `detect_and_save.py` to begin detection.
    You can pass the argument to resume the detection from certain frame name
@@ -44,9 +48,10 @@ The video is located in cctv/SIMPANG 4 PATUNG KUDA.
   Currently, this setup is made for CPU purposes and has not been tested on GPU using CUDNN.
   We have not implemented it due to environment complexity, especially on Windows.
 
-- ##### 100% CPU Utilization
-  The default setting is setup for normal CPU utilization. To utilize maximum CPU,
-  go to `Makefile` and change the line `OPENMP=0` to `OPENMP=1`.
+- ##### Better CPU utilization
+  The default setting is setup for normal CPU utilization. To add more CPU utilization,
+  you can add multiprocessing technique by going to `Makefile` and change the line
+  `OPENMP=0` to `OPENMP=1`.
 
 ## Developers
 
