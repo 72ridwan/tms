@@ -34,3 +34,5 @@ darknet/yolov3.weights
 cctv/
 map/
 darknet/main_pid
+!regions.csv
+!coords/**
