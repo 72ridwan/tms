@@ -16,7 +16,7 @@ parser.add_argument("-s", "--start", dest="start", default="", action="store",
                     help="Start frame file name, sorted alphabetically")
 parser.add_argument("-e", "--end", dest="end", action="store",  default="",
                     help="End frame file name, sorted alphabetically")
-parser.add_argument("-t", "--filetype", action="store", dest="filetype", default="", required=True,
+parser.add_argument("-t", "--file_type", action="store", dest="filetype", default="", required=True,
                     help="File type of the image sequences. Required. Write the extension directly." +\
                         "Example: -t=jpg")
 parser.add_argument("-p", "--folder_path", action="store", dest="folder_path", default="", required=True,
