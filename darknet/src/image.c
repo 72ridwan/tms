@@ -4,6 +4,10 @@
 #include "cuda.h"
 #include <stdio.h>
 #include <math.h>
+#include <unistd.h>
+#include <signal.h>
+#include <stdlib.h>
+#include <limits.h>
 
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
@@ -240,9 +244,9 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
 {
     int i,j;
     
-    FILE *fparid;
-    fparid = fopen("hasil_prediksi.csv", "w+");
-    fprintf(fparid, "object, probability, left, top, right, bottom\n");
+    FILE *fpredict;
+    fpredict = fopen("hasil_prediksi.csv", "w+");
+    fprintf(fpredict, "object, probability, left, top, right, bottom\n");
     
     FILE *fopen( const char * filename, const char * mode );
 
@@ -259,7 +263,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
                     strcat(labelstr, names[j]);
                 }
                 printf("%s: %.0f%%\n", names[j], dets[i].prob[j]*100);
-                fprintf(fparid, "%s, %.5f,", names[j], dets[i].prob[j]);
+                fprintf(fpredict, "%s, %.5f,", names[j], dets[i].prob[j]);
             }
         }
         if(class >= 0){
@@ -297,7 +301,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             if(top < 0) top = 0;
             if(bot > im.h-1) bot = im.h-1;
             // Print bounding box values 
-            fprintf(fparid, "%d, %d, %d, %d\n", left, top, right, bot);
+            fprintf(fpredict, "%d, %d, %d, %d\n", left, top, right, bot);
 
             draw_box_width(im, left, top, right, bot, width, red, green, blue);
             if (alphabet) {
@@ -316,7 +320,35 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             }
         }
     }
-    fclose(fparid);
+    fclose(fpredict);
+
+    FILE * fp;
+    char ch;
+    char pid_main[30];
+    int len = 0;
+    int pid_main_int;
+
+    // Read the main_pid file
+
+    fp = fopen("main_pid", "r");
+
+    if (fp == NULL) {
+      perror("Oops! We can't open the main_pid.\n");
+    } else {
+      ch = fgetc(fp);
+      while (ch != EOF) {
+        pid_main[len] = ch;
+        ch = fgetc(fp);
+        len++;
+      }
+      pid_main[len] = '\0';
+      pid_main_int = atoi(pid_main);
+      
+      // Send a SIGUSR1 signal to the PID.
+
+      kill(pid_main_int, SIGUSR1);
+      printf("Signal sent.");
+    }
 }
 
 void transpose_image(image im)
