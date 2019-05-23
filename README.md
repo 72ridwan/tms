@@ -10,13 +10,13 @@ The code is downloaded from the repository of [PJreddie's YOLOv3 Darknet](https:
 1. Clone this repository
 
    ```
-   git clone https://gitlab.cs.ui.ac.id/rachmat.ridwan/tms
+   git clone https://github.com/72ridwan/tms.git
    cd tms
    ```
    
-1. Download the YOLOv3 pre-trained weights data to `darknet` folder.
+1. [Download](https://drive.google.com/open?id=1C3YkvLjn0MWFccc8n9feT2mxrJKs4fDB) the YOLOv3 pre-trained weights data to `darknet` folder.
 
-1. Download the CCTV data and the maps from this drive.
+1. Download the CCTV data and the maps [from this drive](https://drive.google.com/open?id=11upryL7cOCL8uRIXiJTw1mxLaRUjttm3).
 
 1. Run `make` to compile the C source code
 
@@ -34,8 +34,8 @@ The video is located in cctv/SIMPANG 4 PATUNG KUDA.
    You can pass the argument to resume the detection from certain frame name
    shall the process was terminated in the middle.
    ```
-   python3 detect_and_save.py --start "0000006.jpg" --filetype "jpg" \
-     --folder_path="../frame/cctv_SIMPANG 4 PATUNG KUDA_patungkuda selatan 120 0_x264.mp4"
+   python3 detect_and_save.py --start "0000006.jpg" --file_type "jpg" \
+     --folder_path="../frame/cctv_SIMPANG 4 PATUNG KUDA_patungkuda selatan 1200_x264.mp4"
    ```
    
 ### Other configurations
