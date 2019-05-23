@@ -36,3 +36,6 @@ map/
 darknet/main_pid
 !regions.csv
 !coords/**
+
+# Ignore personal jupyter notebook
+anotasi_yudis.ipynb
