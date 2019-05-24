@@ -246,7 +246,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
     
     FILE *fpredict;
     fpredict = fopen("hasil_prediksi.csv", "w+");
-    fprintf(fpredict, "object, probability, left, top, right, bottom\n");
+    fprintf(fpredict, "object_probs,left,top,right,bottom\n");
     
     FILE *fopen( const char * filename, const char * mode );
 
@@ -261,9 +261,10 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
                 } else {
                     strcat(labelstr, ", ");
                     strcat(labelstr, names[j]);
+                    fprintf(fpredict, " ");
                 }
                 printf("%s: %.0f%%\n", names[j], dets[i].prob[j]*100);
-                fprintf(fpredict, "%s, %.5f,", names[j], dets[i].prob[j]);
+                fprintf(fpredict, "%s %.5f", names[j], dets[i].prob[j]);
             }
         }
         if(class >= 0){
@@ -301,7 +302,7 @@ void draw_detections(image im, detection *dets, int num, float thresh, char **na
             if(top < 0) top = 0;
             if(bot > im.h-1) bot = im.h-1;
             // Print bounding box values 
-            fprintf(fpredict, "%d, %d, %d, %d\n", left, top, right, bot);
+            fprintf(fpredict, ",%d,%d,%d,%d\n", left, top, right, bot);
 
             draw_box_width(im, left, top, right, bot, width, red, green, blue);
             if (alphabet) {
