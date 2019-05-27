@@ -1,0 +1,4 @@
+object_probs,left,top,right,bottom
+bus 0.76745,357,215,452,303
+motorbike 0.80104,292,211,309,233
+car 0.94118,791,395,1019,552

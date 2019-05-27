@@ -1,0 +1,4 @@
+object_probs,left,top,right,bottom
+bus 0.87744,424,225,538,337
+car 0.97273,260,233,297,262
+person 0.59436,316,215,326,237

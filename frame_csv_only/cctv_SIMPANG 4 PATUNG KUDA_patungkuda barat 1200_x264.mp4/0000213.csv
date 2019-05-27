@@ -1,0 +1,3 @@
+object_probs,left,top,right,bottom
+person 0.88753,209,293,230,331
+person 0.87822,354,251,372,284

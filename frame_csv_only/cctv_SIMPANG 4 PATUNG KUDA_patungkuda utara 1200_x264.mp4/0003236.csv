@@ -1,0 +1,4 @@
+object_probs,left,top,right,bottom
+motorbike 0.84346,700,356,744,412
+motorbike 0.81861,665,330,694,368
+motorbike 0.63047,613,310,641,350

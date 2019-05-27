@@ -1,0 +1,4 @@
+object_probs,left,top,right,bottom
+bus 0.99793,764,266,1079,489
+motorbike 0.70092,173,525,237,578
+person 0.66889,173,482,219,549

@@ -1,0 +1,5 @@
+object_probs,left,top,right,bottom
+car 0.76830,337,256,400,305
+person 0.84783,212,276,227,302
+person 0.82538,170,253,185,278
+person 0.78829,235,295,253,325

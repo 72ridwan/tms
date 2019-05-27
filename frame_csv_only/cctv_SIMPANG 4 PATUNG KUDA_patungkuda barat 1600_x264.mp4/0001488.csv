@@ -1,0 +1,4 @@
+object_probs,left,top,right,bottom
+truck 0.98113,721,344,996,503
+car 0.93209,425,266,496,308
+person 0.53605,188,258,201,284

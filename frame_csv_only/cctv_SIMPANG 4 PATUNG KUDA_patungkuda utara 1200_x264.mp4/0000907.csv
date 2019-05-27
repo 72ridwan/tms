@@ -1,0 +1,4 @@
+object_probs,left,top,right,bottom
+car 0.99770,172,320,296,412
+car 0.77332,522,221,564,268
+car 0.76742,2,289,27,326

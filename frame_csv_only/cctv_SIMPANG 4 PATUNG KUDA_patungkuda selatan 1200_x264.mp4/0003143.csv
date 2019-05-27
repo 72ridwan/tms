@@ -1,0 +1,6 @@
+object_probs,left,top,right,bottom
+truck 0.80224,379,211,484,317
+car 0.64323 truck 0.50595,908,437,1079,636
+motorbike 0.57560,311,215,325,234
+motorbike 0.57306,336,227,348,248
+motorbike 0.53776,298,214,312,232
