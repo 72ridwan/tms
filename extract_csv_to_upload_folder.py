@@ -5,8 +5,8 @@ import sys
 import shutil
 import time
 
-if not os.path.exists('frame_csv_only'):
-    os.makedirs('frame_csv_only')
+if not os.path.exists('detections'):
+    os.makedirs('detections')
 
 cctv_views = os.listdir('frame')
 
@@ -14,7 +14,7 @@ for subdir in cctv_views:
     if not os.path.isdir('frame/' + subdir):
         continue
     
-    frame_csv_path = 'frame_csv_only/' + subdir
+    frame_csv_path = 'detections/' + subdir
     frame_path = 'frame/' + subdir
     if not os.path.exists(frame_csv_path):
         os.makedirs(frame_csv_path)
