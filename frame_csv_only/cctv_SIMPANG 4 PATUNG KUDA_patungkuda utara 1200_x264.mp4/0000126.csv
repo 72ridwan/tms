@@ -1,5 +1,0 @@
-object_probs,left,top,right,bottom
-traffic light 0.50996,416,172,434,194
-bus 0.99792,306,259,831,519
-person 0.57633,622,231,643,265
-person 0.52627,644,241,661,287

@@ -1,4 +1,0 @@
-object_probs,left,top,right,bottom
-bus 0.99296,442,233,599,346
-car 0.84243,196,238,234,269
-person 0.76292,356,255,371,288

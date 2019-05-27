@@ -1,4 +1,0 @@
-object_probs,left,top,right,bottom
-car 0.99844,487,397,737,500
-car 0.98782,589,475,913,645
-person 0.65166,642,234,660,271

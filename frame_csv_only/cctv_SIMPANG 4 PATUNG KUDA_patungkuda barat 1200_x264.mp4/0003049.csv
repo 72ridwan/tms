@@ -1,5 +1,0 @@
-object_probs,left,top,right,bottom
-motorbike 0.53252,308,395,333,423
-car 0.88884,357,267,407,298
-person 0.66158,299,362,333,418
-person 0.51077,1000,265,1041,316

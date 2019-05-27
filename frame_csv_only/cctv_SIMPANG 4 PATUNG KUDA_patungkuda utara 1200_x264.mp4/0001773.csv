@@ -1,8 +1,0 @@
-object_probs,left,top,right,bottom
-traffic light 0.54330,417,171,434,195
-motorbike 0.92026,56,367,123,419
-motorbike 0.87737,171,424,251,492
-car 0.98256,0,279,121,334
-person 0.59585,175,396,217,472
-person 0.50819,190,397,236,470
-person 0.50634,54,348,99,398

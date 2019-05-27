@@ -1,5 +1,0 @@
-object_probs,left,top,right,bottom
-traffic light 0.51531,415,171,433,197
-motorbike 0.67176,611,227,630,252
-car 0.81198,573,171,604,196
-car 0.76840,603,187,636,214
