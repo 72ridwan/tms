@@ -20,6 +20,8 @@ darknet/main_pid
 frame/
 frame_csv_only/
 detections/
+frame_annotate/
+detections.csv
 
 # Ignore personal jupyter notebook
 anotasi_yudis.ipynb
