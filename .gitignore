@@ -4,6 +4,7 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *.swp
+__pycache__/
 
 .ipynb_checkpoints
 
@@ -17,6 +18,9 @@ darknet/main_pid
 !regions.csv
 !coords/**
 frame/
+frame_csv_only/
+detections/
 
 # Ignore personal jupyter notebook
 anotasi_yudis.ipynb
+Untitled.ipynb
