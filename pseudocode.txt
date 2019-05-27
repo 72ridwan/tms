@@ -1,0 +1,15 @@
+# Define a CCTV part of image whose region has been detected
+# Go to the path
+# Prepare the map to be imshow-ed
+# Get the coordinates and matrix coordinates
+# # Specifically, parse from CSV of coordinates to matrix M
+# For every CSV file in the frame image, sorted alphabetically:
+# # Eliminate non-vehicles point (can be obtained from the "object" header)
+  # For example, vehicles: truck, car, motorbike
+# # For every bounding box vehicles:
+# # # Find the bounding box center point
+# # # Map the point according to transformation matrix M
+# # # Done.
+# # Now, for displaying purposes:
+# # Draw the map and all the transformed points
+# # In new window, draw the CCTV image with boxes
